@@ -106,7 +106,7 @@ body {
 }
 
 /* ------------------------------------------------------------------------------- */
-/* [전역 밸런스 조정] 좁았던 글자 배치 영역(480px)을 중앙 정렬 상태로 780px까지 넓힘 */
+/* [전역 밸런스 조정] 글자 배치 영역 중앙 정렬 상태 유지 */
 /* ------------------------------------------------------------------------------- */
 .testimonial, div.boxed blockquote, div.boxed p,
 div.boxed h2 {
@@ -239,45 +239,6 @@ select {
   font-size: 1.25rem;
   font-weight: bold;
 }
-.top__right {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-@media (max-width: 600px) {
-  .top__right {
-    gap: 20px;
-  }
-}
-.top .links {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.top__link {
-  font-size: 1rem;
-  text-decoration: none;
-  transition: color 0.2s ease-in, border-color 0.2s ease-in;
-}
-.top__link:hover {
-  transition: color 0.1s ease-out, border-color 0.1s ease-out;
-}
-.top__cta {
-  padding: 4px 16px;
-  border-radius: 999px;
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-flex;
-  transition: color 0.3s;
-}
-.top__cta .arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-  margin-left: 0.25em;
-}
-.top__cta:hover .arrow {
-  transform: translateX(3px);
-}
 
 /* ------------------------------------------------------------------------------- */
 /* Intros with big type */
@@ -300,7 +261,7 @@ select {
 .overview {
   font-size: 4rem;
   letter-spacing: -0.1875rem;
-  line-height: 5.2rem; /* 흰색 박스 세로 여백 확보를 위해 기존 4.4rem에서 소폭 확장 */
+  line-height: 5.2rem; 
   text-align: center;
   margin-bottom: 40px;
 }
@@ -362,12 +323,6 @@ div.boxed blockquote p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-div.boxed p a {
-  transition: color 0.2s ease-in, border-color 0.2s ease-in;
-}
-div.boxed p a:hover {
-  transition: color 0.1s ease-out, border-color 0.1s ease-out;
-}
 
 /* ------------------------------------------------------------------------------- */
 /* Footers */
@@ -380,29 +335,21 @@ div.boxed p a:hover {
   font-size: 1rem;
   flex-wrap: wrap;
 }
-
 .site-footer a {
   text-decoration: underline;
 }
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-left,
-.footer-right {
-  margin: 0.5rem 0;
+.footer-email:hover {
+  color: #ffffff !important; 
 }
 
 /* ------------------------------------------------------------------------------- */
-/* Portfolios */
+/* Portfolios (Siema Slider) */
 /* ------------------------------------------------------------------------------- */
 .siema-wrapper {
   border-radius: 12px;
   overflow: hidden;
   line-height: 0;
 }
-
 .siema {
   margin: 0;
   display: flex;
@@ -421,7 +368,6 @@ div.boxed p a:hover {
   margin: 0;
   border-radius: 0 !important;
 }
-
 .slider-controls {
   font-size: 1rem;
   letter-spacing: -0.1rem;
@@ -435,11 +381,9 @@ div.boxed p a:hover {
   cursor: pointer;
   border-bottom: 1px solid;
 }
-
 div.boxed .slider-heading {
   margin-top: 0;
 }
-
 a.cta-project {
   font-size: 1rem;
   line-height: 1rem;
@@ -448,114 +392,6 @@ a.cta-project {
   border-radius: 999px;
   padding: 2px 8px;
   transition: color 0.2s ease-in, border-color 0.2s ease-in;
-}
-a.cta-project:hover {
-  transition: color 0.1s ease-out, border-color 0.1s ease-out;
-}
-
-/* ------------------------------------------------------------------------------- */
-/* Testimonials */
-/* ------------------------------------------------------------------------------- */
-.testimonial {
-  border-radius: 12px;
-  padding: 80px 40px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-.testimonial blockquote {
-  border-left: none;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 1rem;
-  line-height: 2rem;
-  margin: 0 0 2rem;
-  font-style: normal;
-  quotes: "“" "”" "‘" "’";
-}
-.testimonial blockquote p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-.testimonial blockquote p::before {
-  content: open-quote;
-}
-.testimonial blockquote p::after {
-  content: close-quote;
-}
-.testimonial figcaption {
-  font-size: 1rem;
-}
-.testimonial figcaption strong {
-  font-weight: normal;
-}
-
-/* ------------------------------------------------------------------------------- */
-/* Bios, Info, About section */
-/* ------------------------------------------------------------------------------- */
-.bio-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.bio-image {
-  width: 100%;
-}
-@media (min-width: 1100px) {
-  .bio-image {
-    width: 48%;
-  }
-}
-.bio-image img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.bio-text {
-  width: 100%;
-  font-size: 1.6875rem;
-  line-height: 2rem;
-}
-@media (min-width: 1100px) {
-  .bio-text {
-    width: 48%;
-  }
-}
-
-.highlight {
-  text-decoration: underline;
-}
-
-.bio-links {
-  display: flex;
-  gap: 3rem;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  flex-wrap: wrap;
-}
-.bio-links ul {
-  list-style: none;
-  padding: 0;
-}
-.bio-links ul li {
-  margin-bottom: 8px;
-}
-.bio-links a {
-  text-decoration: none;
-  position: relative;
-}
-.bio-links a::before {
-  content: "→";
-  margin-right: 0.5rem;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-.bio-links a:hover {
-  text-decoration: none;
-}
-.bio-links a:hover::before {
-  transform: translateX(3px);
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -568,7 +404,6 @@ div.boxed .section-header {
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 div.boxed .section-header h2 {
   font-size: 2.6rem;
   letter-spacing: 3px;
@@ -579,33 +414,19 @@ div.boxed .section-header h2 {
   color: #ffffff;
 }
 
-.slider-heading.no-controls {
-  margin-top: 35px;
-}
-
-#consult p {
-  margin-top: 35px;
-}
-
 /* ------------------------------------------------------------------------------- */
-/* PRESS Card Section (우측 이미지 피팅 완료) */
+/* ⭐ PRESS Card Section (전체 화면 대응 스페이싱 및 버튼 스케일 업 최종본) */
 /* ------------------------------------------------------------------------------- */
 .press-card-container {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1020px;
+  max-width: 780px; 
   margin-left: auto;
   margin-right: auto;
   padding: 20px 0;
-}
-
-@media (max-width: 1100px) {
-  .press-card-container {
-    width: calc(100% - 80px);
-  }
 }
 
 .press-card {
@@ -613,12 +434,11 @@ div.boxed .section-header h2 {
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 780px; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: row-reverse; 
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .press-card:hover {
@@ -627,7 +447,7 @@ div.boxed .section-header h2 {
 }
 
 .card-thumbnail {
-  flex: 0 0 38%;
+  flex: 0 0 35%; 
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }
@@ -641,92 +461,103 @@ div.boxed .section-header h2 {
 
 .card-content {
   flex: 1;
-  padding: 24px;
+  padding: 32px 36px 32px 32px !important; 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: 0 !important; 
 }
 
+/* [제목] 본문과의 균형 잡힌 대비 */
 .card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.35rem !important; 
+  font-weight: 700 !important;   
   line-height: 1.4;
-  color: #ffffff;
-  margin: 0;
+  color: #ffffff !important;
+  margin: 0 0 12px 0 !important; 
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+/* [본문] 제목과의 크기 격차 완화 및 줄간격 안정화 */
 .card-body {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #aaaaaa;
-  margin: 0;
+  font-size: 1.0rem !important;   
+  line-height: 1.45 !important;  
+  color: #b0b0b3 !important;     
+  margin: 0 0 22px 0 !important; /* 버튼 전 호흡 확보 */
   display: -webkit-box;
   -webkit-line-clamp: 2; 
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 4px;
 }
 
+/* [버튼] ⭐ Brand 링크와 크기 및 가시성 완전 통일 */
 .card-btn {
   align-self: flex-start;
-  font-size: 0.85rem;
-  color: #ffffff;
-  border: 1px solid #555555;
-  padding: 6px 16px;
-  border-radius: 999px;
+  font-size: 0.95rem !important;  /* 기존 0.8rem에서 과감히 확장 */
+  font-weight: 500 !important;
+  color: #ffffff !important;
+  border: 1px solid #555555 !important;
+  padding: 4px 14px !important;   /* 알맞은 비율의 알약 모양 피팅 */
+  border-radius: 999px !important;
   transition: all 0.2s ease;
+  margin-top: auto; 
 }
-
 .card-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
 }
 
+/* 📱 모바일 및 태블릿 환경 전용 숨통 틔우기 오버라이딩 */
 @media (max-width: 768px) {
-  .press-card {
-    flex-direction: column; 
-    max-width: 100%;
-  }
-
   .card-thumbnail {
-    flex: none;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    flex: 0 0 34%; 
+    aspect-ratio: 1 / 1; 
   }
 
+  /* ⭐ 답답해 보이던 내부 패딩을 26px권으로 시원하게 확장하여 여유 높이 확보 */
   .card-content {
-    flex: none;
-    padding: 20px;
+    padding: 26px 26px 26px 24px !important; 
+  }
+
+  .card-title {
+    font-size: 1.15rem !important; 
+    margin: 0 0 10px 0 !important; 
+  }
+
+  .card-body {
+    font-size: 0.9rem !important;  
+    line-height: 1.4 !important; 
+    color: #b0b0b3 !important;
+    margin: 0 0 18px 0 !important; /* 컴팩트하면서 기분 좋은 여백 */
+  }
+
+  /* ⭐ 모바일에서도 버튼이 왜소해 보이지 않도록 동기화 */
+  .card-btn {
+    font-size: 0.85rem !important; 
+    padding: 4px 12px !important;
   }
 }
 
 /* ------------------------------------------------------------------------------- */
 /* Hero Title Solid Box Highlight (간격 압축 최적화 버전) */
 /* ------------------------------------------------------------------------------- */
-
-/* 1. 타이틀 전체의 기본 줄 간격을 훨씬 촘촘하게 대폭 줄입니다 */
 .hero .overview {
-  line-height: 1.15 !important; /* 글자 크기 대비 황금 비율로 좁힘 */
+  line-height: 1.15 !important; 
 }
-
-/* 2. 흰색 박스가 아래 줄을 밀어내던 여백을 제로(0)로 만듭니다 */
 .title-highlight {
-  background-color: #ffffff; /* 꽉 찬 완전 흰색 배경 */
-  color: #121212 !important; /* 글자색 반전 */
-  padding: 4px 14px;         /* 박스 안쪽 여백 */
+  background-color: #ffffff; 
+  color: #121212 !important; 
+  padding: 4px 14px;         
   display: inline-block;     
-  margin-bottom: -2px;        /* ⭐ 기존 12px에서 0px로 제거하여 아래 줄과 밀착 */
+  margin-bottom: -2px;        
 }
-
-@media (max-width: 600px) {
+@media (max-ui-width: 600px) {
   .hero .overview {
-    line-height: 1.2 !important; /* 모바일 화면 줄간격 별도 최적화 */
+    line-height: 1.2 !important; 
   }
   .title-highlight {
     padding: 2px 10px;       
@@ -736,14 +567,6 @@ div.boxed .section-header h2 {
 /* ------------------------------------------------------------------------------- */
 /* 섹션 말단 불필요한 여백(hr) 제거로 전체 간격 통일 */
 /* ------------------------------------------------------------------------------- */
-
-/* 섹션 내부의 가장 마지막 boxed 안에 있는 가장 마지막 hr은 숨김 처리 */
 section div.boxed:last-child hr:last-child {
   display: none !important;
-}
-
-CSS
-/* 푸터 이메일 마우스 호버 효과 */
-.footer-email:hover {
-  color: #ffffff !important; /* 마우스 올리면 쨍한 화이트로 변환 */
 }
